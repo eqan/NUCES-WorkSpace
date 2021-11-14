@@ -1,16 +1,28 @@
 {
-  "name": "node-js",
+  "name": "nuces-workspace",
   "version": "1.0.0",
-  "description": "",
+  "description": "NUCES WorkSpace is an online platform for FAST NUCES that is designed to minimize the manual work and shift towards digitization to manage the university’s data efficiently.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eqan/NUCES-WorkSpace.git"
+  },
+  "keywords": [
+    "mern-stack",
+    "management",
+    "website"
+  ],
   "author": "Eqan Ahmad",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eqan/NUCES-WorkSpace/issues"
+  },
+  "homepage": "https://github.com/eqan/NUCES-WorkSpace#readme",
   "dependencies": {
-    "joi": "^17.4.2",
-    "nodemon": "^2.0.14"
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
   }
 }

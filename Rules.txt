@@ -1,6 +1,3 @@
-# NUCES WorkSpace
-
-### Rules & Regulations For This Project
 1. Project would be divided into features which will be distributed among the group.
 2. Feature distribution would depend upon the capability, sustainability, prior experiences, and individual preference to some degree.
 3. A feature implementation would include UI, backend & frontend which would be the responsibility of that particular individual.

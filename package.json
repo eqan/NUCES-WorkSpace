@@ -2,8 +2,10 @@
   "name": "nuces-workspace",
   "version": "1.0.0",
   "description": "NUCES WorkSpace is an online platform for FAST NUCES that is designed to minimize the manual work and shift towards digitization to manage the university’s data efficiently.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,7 +24,11 @@
   },
   "homepage": "https://github.com/eqan/NUCES-WorkSpace#readme",
   "dependencies": {
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
-    "mysql": "^2.18.1"
+    "express-session": "^1.17.2",
+    "mysql": "^2.18.1",
+    "passport": "^0.5.0"
   }
 }

@@ -1,7 +1,21 @@
 import './registration.css';
-import React from 'react';
+import React, { useState } from 'react';
+import registerController from '../../controller/register-controller';
 
-const registration=()=>{
+const Registration=()=>{
+    const [userregistrationdata,setUserRegistrationData] = useState({
+        firstname:"",
+        lastname:"",
+        mobileno:"",
+        email:"",
+        password:""
+    });
+    const handleinput=(e)=>{
+        const name=e.target.name;
+        const value=e.target.value;
+        console.log(name,value);
+        setUserRegistrationData({...userregistrationdata,[name]:value})
+    }
     const validate_number=()=>
     {
         
@@ -14,6 +28,9 @@ const registration=()=>{
     {
         
     }
+	const runQuery=()=>{
+		registerController.addNewUser(userregistrationdata.firstname,userregistrationdata.lastname,userregistrationdata.mobileno,userregistrationdata.email,userregistrationdata.password);
+	}
     return (
         <div className="makemeworkatcenter">
 			<form>
@@ -23,25 +40,25 @@ const registration=()=>{
 						<p align= "center">Registration</p>
 					</div>
                     <div className="Centeredform">
-                        <div class="splitinput">
-					    	<div class= "splitinput1">
-					    		<input type="text" name="Firstname" placeholder="First name"/>
+                        <div className="splitinput">
+					     	<div className= "splitinput1">
+					     		<input type="text" onChange={handleinput} value={userregistrationdata.firstname} name="firstname" id="firstname" placeholder="First name"/>
 					    	</div>
-					    	<div class= "splitinput2">
-					    		<input type="text" name="Lastname" placeholder="Last name"/>
+					    	<div className= "splitinput2">
+					     		<input type="text" onChange={handleinput} value={userregistrationdata.lastname} name="lastname" id="lastname" placeholder="Last name"/>
 					    	</div>
 					    </div>
 					    <div className="otherinputs">
-					    	<input id="number" type="text" onBlur={validate_number} name="mobileno" placeholder="Phone number" className="Remaining"/>
+					     	<input onChange={handleinput} value={userregistrationdata.mobileno} type="text" onBlur={validate_number} name="mobileno" id="mobileno" placeholder="Phone number" className="Remaining"/>
 				    	</div>
 					    <div className="otherinputs">
-				    		<input id="email" type="text" onBlur={validate_email} name="email" placeholder="Email" className="Remaining"/>
+				     		<input onChange={handleinput} value={userregistrationdata.email}type="text" onBlur={validate_email} name="email" id="email" placeholder="Email" className="Remaining"/>
 				    	</div>
 				    	<div className="otherinputs">
-					    		<input id="password" type="password" onKeyUp={cal_passrange} name="password" placeholder="Password Here..." className="Remaining"/>
+					     		<input onChange={handleinput} value={userregistrationdata.password} type="password" onKeyUp={cal_passrange} name="password" id="password" placeholder="Password Here..." className="Remaining"/>
 				    	</div>
 				    	<div style={{height:1, marginTop:'auto', marginBottom:'auto'}}>
-				    		<button type="button" name="button" >Create account</button>
+				    		<button type="button" onClick={runQuery} name="button" >Create account</button>
 				    	</div>
 				    	<div style={{float:'right'}}>
 					    	<p>
@@ -62,4 +79,4 @@ const registration=()=>{
 		</div>
     )
 };
-export default registration;
+export default Registration;

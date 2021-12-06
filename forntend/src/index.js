@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Registration from './Components/forms/registration';
+import Registration from './Components/forms/registration'
 
 ReactDOM.render(
   <React.StrictMode>

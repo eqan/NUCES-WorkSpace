@@ -26,7 +26,7 @@ app.get('/createdb', (req, res) => {
   db.query(cmd, err => {
     if (err)
       throw err;
-    res.send("Database Created!");
+    res.send("Database Created!");//OO ho ja bhai
   })
 })
 
@@ -34,7 +34,7 @@ app.get('/createdb', (req, res) => {
 // Create Table
 app.get('/createusertable', (req, res) => {
   let cmd = 'CREATE TABLE Users(id int AUTO_INCREMENT, username VARCHAR(255), name VARCHAR(255),'
-    + 'password VARCHAR(255), authoritylevel int, PRIMARY KEY(id))';
+    + 'password VARCHAR(25), authoritylevel int, PRIMARY KEY(id))';
   db.query(cmd, err => {
     if (err)
       throw err;
@@ -87,5 +87,5 @@ app.get('/deleteuser/:id', (req, res) => {
 })
 
 app.listen('3000', () => {
-  console.log('Server Started on port 3000');
+  console.log('Server isnot listening..!!');
 })

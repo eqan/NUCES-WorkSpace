@@ -16,5 +16,8 @@ function runQuery(query, params, callback) {
 module.exports = {
   getUserInfo(username) {
     runQuery("SELECT * FROM Users WHERE username = ?", username, result => console.log(result));
+  },
+  addNewUser(firstname,lastname,mobileno,email,password){
+    runQuery("Insert into RegUser(firstname,lastname,mobileno,email,password) values (?,?,?,?,?)",firstname,lastname,mobileno,email,password,result =>console.log(result));
   }
 }

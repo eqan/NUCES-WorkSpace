@@ -1,5 +1,147 @@
-h1{
-    text-align: center;
-    size: 20px;
-    color: white;
-  }
+div 
+{
+	display: block;
+}
+.centerblock
+{
+	width: 400px;
+	margin-left: auto!important;
+	margin-right: auto!important;
+}
+.Centeredform{
+    padding-left: 30px;
+    width: 400px;
+	margin-left: auto!important;
+	margin-right: auto!important;
+}
+.makemeworkatcenter
+{
+	margin-left: auto!important;
+	margin-top: 15%!important;
+	margin-right: auto!important;
+}
+input
+{
+	width: 130px;
+	height: 39px;
+	background: #eeeeee;
+	color: #303031;
+	border-radius: 2px;
+	border: 0px;
+	transition: border,background,color .2s ease;
+	text-align: center;
+}
+img
+{
+	vertical-align: middle;
+	border: 0;
+}
+.img-size
+{
+	height:80px;
+	width: 80px;
+	margin-left: auto!important;
+	margin-right: auto!important;
+}
+.img-location
+{
+	width: 100px;
+	height: 100px;
+	margin-left: auto!important;
+	margin-right: auto!important;
+}
+.clientimage
+{
+	margin-bottom: 10px;
+}
+.Remaining
+{
+	width: 332px;
+	text-align: initial;
+	padding-left: 5px;
+	height: 38px;
+}
+.splitinput
+{
+	display: inline-flex;
+	text-align: initial;
+	width: 100%;
+	line-height: 30px;
+	margin-top: 30px; 
+	height: 45px;
+}	
+.splitinput1
+{
+	position: relative;
+	width: 48%;
+	margin-right: 25px;
+	margin-bottom: 5px;
+	font-size: 0;
+	white-space: nowrap;
+}
+.splitinput2
+{
+	position: relative;
+	width: 48%;
+	margin-right: 25px;
+	margin-bottom: 5px;
+	font-size: 0;
+	white-space: nowrap;
+}
+.otherinputs
+{
+	position: relative;
+	width: 48%;
+	margin-right: 25px;
+	margin-top: 2px;
+	font-size: 0;
+	white-space: nowrap;
+	height: 45px;
+}
+button
+{
+	display: inline-block;
+	position: relative;
+	border-radius: 3px;
+	font-family: 'Open Sans','Helvetica Neue','Helvetica','Arial',sans-serif;
+	font-weight: 400;
+	background: #48d57d;
+	border: 1px solid #48d57d;
+	color: #fff;
+	padding: 14px 18px;
+	margin-top: 30px;
+	width: 340px;
+	font-size: 16px;
+	line-height: normal;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;		
+}
+a
+{
+	text-decoration-line: none;
+	color:#fff;
+}
+body
+{
+	background: #fff;
+	color: #7b7b7b;
+	font-family: 'Open Sans', 'Helvetica Neue', 'Arial',sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+}
+h1
+{
+	font-weight: 300;
+	font-size: 25px;
+	line-height: 15px;
+	text-rendering: optimizelegibility;
+	font-family: system-ui;
+	color: #303031;
+	margin-left: auto!important;
+	margin-right: auto!important;
+}
+p
+{
+	margin: 0 0 10px;
+}

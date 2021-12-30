@@ -202,7 +202,6 @@ box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2), inset -5px -5px 15px rgba(255,
 	background-color: #4bce8ce0;
 	color: white;
   }
-  
   h2 {
-    display: inline;
-}
+      display: inline;
+  }

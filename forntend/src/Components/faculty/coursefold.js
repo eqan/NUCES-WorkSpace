@@ -1,13 +1,11 @@
 import React from 'react'
-import './regport.css'
+import './coursefold.css'
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import Logo from '../../assets/Logo.png'
 
-
-function regprot() {
+function coursefold() {
     return (
-          <div className="container-fluid">
-            
+            <div className="container-fluid">
             <div className="row header">
     
                 <div className="col-md-10">
@@ -28,8 +26,6 @@ function regprot() {
                     </ul>
                 </div>
             </div>
-    
-           
             <div className="col-md-2 menucontent">
               
                 <a href="#"><h1>Dashboard</h1></a>
@@ -43,7 +39,7 @@ function regprot() {
     <div className="col-md-10 maincontent" >
     
         <div className="panel panel-default contentinside">
-            <div className="panel-heading">Research Portfolio</div>
+            <div className="panel-heading">Course Folder</div>
     
             <div className="panel-body">
                 <ul className="nav nav-tabs doctor">
@@ -61,7 +57,7 @@ function regprot() {
                                <td>123</td>
     
                                <td>
-                                <div className="but">
+                                <div className='but'>
                                      <button  href="#" className="btn btn-danger" ><span className="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
                                 </div>
                                </td>
@@ -96,9 +92,9 @@ function regprot() {
                     </div>
         </div>
     </div>
-            </div>  
-    </div>
-    );
-};
+            </div>
+        </div>
+    )
+}
 
-export default regprot
+export default coursefold

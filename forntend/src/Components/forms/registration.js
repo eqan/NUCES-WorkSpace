@@ -29,7 +29,12 @@ const Registration=()=>{
         
     }
 	const runQuery=()=>{
+<<<<<<< HEAD
 		registerController.addNewUser(userregistrationdata.firstname,userregistrationdata.lastname,userregistrationdata.mobileno,userregistrationdata.email,userregistrationdata.password);
+=======
+		registerController.addNewUser(userregistrationdata.firstname,userregistrationdata.lastname,
+			userregistrationdata.mobileno,userregistrationdata.email,userregistrationdata.password);
+>>>>>>> 9ee8062642b06a50c44fd98e1a0e468a26c82e6d
 	}
     return (
         <div className="makemeworkatcenter">
@@ -42,6 +47,7 @@ const Registration=()=>{
                     <div className="Centeredform">
                         <div className="splitinput">
 					     	<div className= "splitinput1">
+<<<<<<< HEAD
 					     		<input type="text" onChange={handleinput} value={userregistrationdata.firstname} name="firstname" id="firstname" placeholder="First name"/>
 					    	</div>
 					    	<div className= "splitinput2">
@@ -56,6 +62,22 @@ const Registration=()=>{
 				    	</div>
 				    	<div className="otherinputs">
 					     		<input onChange={handleinput} value={userregistrationdata.password} type="password" onKeyUp={cal_passrange} name="password" id="password" placeholder="Password Here..." className="Remaining"/>
+=======
+					     		<input type="text" onChange={handleinput} value={'M Shahrose'} name="firstname" id="firstname" placeholder="First name"/>
+					    	</div>
+					    	<div className= "splitinput2">
+					     		<input type="text" onChange={handleinput} value={'Khan'} name="lastname" id="lastname" placeholder="Last name"/>
+					    	</div>
+					    </div>
+					    <div className="otherinputs">
+					     	<input onChange={handleinput} value={'03004475205'} type="text" onBlur={validate_number} name="mobileno" id="mobileno" placeholder="Phone number" className="Remaining"/>
+				    	</div>
+					    <div className="otherinputs">
+				     		<input onChange={handleinput} value={'shahrosekhan@nu.edu.pk'}type="text" onBlur={validate_email} name="email" id="email" placeholder="Email" className="Remaining"/>
+				    	</div>
+				    	<div className="otherinputs">
+					     		<input onChange={handleinput} value={'sk1234'} type="password" onKeyUp={cal_passrange} name="password" id="password" placeholder="Password Here..." className="Remaining"/>
+>>>>>>> 9ee8062642b06a50c44fd98e1a0e468a26c82e6d
 				    	</div>
 				    	<div style={{height:1, marginTop:'auto', marginBottom:'auto'}}>
 				    		<button type="button" onClick={runQuery} name="button" >Create account</button>

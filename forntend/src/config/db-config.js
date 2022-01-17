@@ -4,7 +4,7 @@ const config = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'WorkSpaceDB',
+  database: 'nucesworkplace',
   options: {
     trustedconnection: true,
     enableArithAbort: true,

@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React from 'react';
 import Register from './views/register'
 import Login from './views/login'
 import Researchport from './views/faculty/regprot'
@@ -9,11 +9,11 @@ import {Route, Switch} from 'react-router-dom'
 function App() {
     return (
         <Switch>
-            <Route path="/fac_research" component={Researchport}/>
-            <Route path="/fac_acad" component={Academicport}/>
-            <Route path="/fac_course" component={Course}/>
+            <Route exact path="/faculty/research" component={Researchport}/>
+            <Route exact path="/faculty/academic" component={Academicport}/>
+            <Route exact path="/faculty/course" component={Course}/>
+            <Route path="/login" component={Login}/>
             <Route path="/register" component={Register}/>
-            <Route path="/" component={Login}/>
         </Switch>
     )
 }

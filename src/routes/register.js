@@ -6,6 +6,12 @@ const hf = require("../utils/helperFunctions");
 const cors = require('cors')
 const { forwardAuthenticated } = require('../config/auth');
 
+function checkUserType(type){
+  if(type === '')
+    return false;
+  return type === "Admin" ? 1 : type === "Faculty" ? 2 : 3;
+}
+
 router.use(express.json())
 // Cors
 router.use(cors())
@@ -15,10 +21,8 @@ router.get('/',forwardAuthenticated, (req, res) => res.render('register'));
 
 //Register handle
 router.post("/", (req, res) => {
-  let { name, email, password, password2 } = req.body;
-  console.log(name)
-  let errors = db.passwordValidator(name, email, password, password2);
-
+  let {type, name, email, password, password2 } = req.body;
+  let errors = db.passwordValidator(type, name, email, password, password2);
     const result = db.getUserInfo(email) || {};
     if (!hf.isEmpty(result)) {
       errors.push({ msg: "Email already exists" });
@@ -27,8 +31,12 @@ router.post("/", (req, res) => {
         bcrypt.hash(password, salt, (err, hash) => {
           hf.throwError(err);
           password = password2 = hash;
-          db.insertUser(name, email, hash)
-          //res.redirect("/login");
+          userType = checkUserType(type);
+          if(userType)
+            db.insertUser(name, email, password, userType);
+          else
+            errors.push("No type detected");
+          res.redirect("/login");
         });
       });
     }

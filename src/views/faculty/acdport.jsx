@@ -18,7 +18,7 @@ function acdport() {
                         <li className="dropdown dmenu">
                             <a href="#." className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Faculty<span className="caret"></span></a>
                             <ul className="dropdown-menu ">
-                                <li><a href="/fac_acad">Change Profile</a></li>
+                                <li><a href="/faculty/academic">Change Profile</a></li>
                                 <li role="separator" className="divider"></li>
                                 <li><a href="index.html.">Logout</a></li>
                             </ul>
@@ -32,9 +32,9 @@ function acdport() {
                     <a href="#"><h1>Dashboard</h1></a>
 
                     <ul className="nav nav-pills nav-stacked">
-                        <li role="presentation"><a href="/fac_research">Research Portfolio</a></li>
-                        <li role="presentation"><a href="/fac_acad">Academic Portfolio</a></li>
-                        <li role="presentation"><a href="/fac_course">Course Folder</a></li>
+                        <li role="presentation"><a href="/faculty/research">Research Portfolio</a></li>
+                        <li role="presentation"><a href="/faculty/academic">Academic Portfolio</a></li>
+                        <li role="presentation"><a href="/faculty/course">Course Folder</a></li>
                     </ul>
                 </div>
                 <div className="col-md-10 maincontent" >

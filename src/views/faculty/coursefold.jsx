@@ -31,9 +31,9 @@ function coursefold() {
                 <a href="#"><h1>Dashboard</h1></a>
                     
                     <ul className="nav nav-pills nav-stacked">
-                        <li role="presentation"><a href="/fac_research">Research Portfolio</a></li>
-                        <li role="presentation"><a href="/fac_acad">Academic Portfolio</a></li>
-                        <li role="presentation"><a href="/fac_course">Course Folder</a></li>
+                        <li role="presentation"><a href="/faculty/research">Research Portfolio</a></li>
+                        <li role="presentation"><a href="/faculty/academic">Academic Portfolio</a></li>
+                        <li role="presentation"><a href="/faculty/course">Course Folder</a></li>
                     </ul>
             </div>
     <div className="col-md-10 maincontent" >

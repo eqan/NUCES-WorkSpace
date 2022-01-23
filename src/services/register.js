@@ -8,10 +8,10 @@ function getUserInfo(email) {
   return data;
 }
 
-function insertUser(username, email, password) {
+function insertUser(username, email, password, type) {
   db.runQuery(
-    "INSERT INTO users(name, email, password) VALUES(?, ?, ?)",
-    [username, email, password],
+    "INSERT INTO users(name, email, password, type) VALUES(?, ?, ?, ?)",
+    [username, email, password, type],
     (result) => {
       data = result;
     }

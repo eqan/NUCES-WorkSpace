@@ -1,8 +1,9 @@
-import React, { Component, useState } from "react";
+import React, {useState } from "react";
+import {Route} from 'react-router-dom';
+import Register from '../views/register';
 import Axios from "axios";
 import Logo from "../assets/Logo.png";
 import "./acdport.css";
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [type, setType] = useState("");
@@ -19,7 +20,6 @@ function App() {
       password: passwordReg,
       password2: passwordReg2,
     }).then((resp) => {
-      console.log(resp);
     });
 
   return (

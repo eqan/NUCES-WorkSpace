@@ -3,8 +3,10 @@ const router = express();
 const db = require("../services/register");
 const bcrypt = require("bcryptjs");
 const hf = require("../utils/helperFunctions");
-const cors = require('cors')
+const cors = require('cors');
 const { forwardAuthenticated } = require('../config/auth');
+
+// const navigate = require("react-router-dom").useNavigate
 
 function checkUserType(type){
   if(type === '')
@@ -17,7 +19,7 @@ router.use(express.json())
 router.use(cors())
 
 // Register Page
-router.get('/',forwardAuthenticated, (req, res) => res.render('register'));
+router.get('/', forwardAuthenticated, (req, res) => "Registered!");
 
 //Register handle
 router.post("/", (req, res) => {
@@ -33,10 +35,12 @@ router.post("/", (req, res) => {
           password = password2 = hash;
           userType = checkUserType(type);
           if(userType)
+          {
             db.insertUser(name, email, password, userType);
+            // router.use('/login')
+          }
           else
             errors.push("No type detected");
-          res.redirect("/login");
         });
       });
     }

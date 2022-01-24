@@ -4,17 +4,17 @@ import Login from './views/login'
 import Researchport from './views/faculty/regprot'
 import Academicport from './views/faculty/acdport'
 import Course from './views/faculty/coursefold'
-import {Route, Switch} from 'react-router-dom'
+import { Routes, Route} from "react-router-dom";
 
 function App() {
     return (
-        <Switch>
-            <Route exact path="/faculty/research" component={Researchport}/>
-            <Route exact path="/faculty/academic" component={Academicport}/>
-            <Route exact path="/faculty/course" component={Course}/>
-            <Route path="/login" component={Login}/>
-            <Route path="/register" component={Register}/>
-        </Switch>
+        <Routes>
+            <Route exact path="/faculty/research" element={<Researchport/>}/>
+            <Route exact path="/faculty/academic" element={<Academicport/>}/>
+            <Route exact path="/faculty/course" element={<Course/>}/>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/register" element={<Register/>}/>
+        </Routes>
     )
 }
 

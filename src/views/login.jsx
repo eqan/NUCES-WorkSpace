@@ -2,7 +2,6 @@ import React, { Component, useState } from "react";
 import Axios from "axios";
 import Logo from "../assets/Logo.png";
 import "./acdport.css";
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [usernameLog, setUserNameLog] = useState("");
